@@ -24,6 +24,7 @@ func getUsersName() string {
 	fmt.Println("Whom shall we greet?")
 	name, _ := reader.ReadString('\n')
 	name = strings.Replace(name, "\n", "", -1)
+	name = strings.Replace(name, "\r", "", -1)
 	return name
 }
 
